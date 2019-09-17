@@ -1,0 +1,45 @@
+{
+  "name": "react-jwt-authentication",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "dotenv-expand": "^5.1.0",
+    "express-cache-controller": "^1.1.0",
+    "i": "^0.3.6",
+    "json-server": "^0.15.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "npm": "^6.11.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1",
+    "rxjs": "^6.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start-json-server": "json-server --watch ./db.json",
+    "start-json-server-auth": "node server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Bicicleta",
+        "cost": 10.0,
+        "quantity": 1000,
+        "image": "https://media.alltricks.com/hd/5c2f265f9cc40.jpg",
+        "description": "Los bikers que quieren estar a la última optan sin duda por modelos como la Moma PEAK, una bicicleta actual y muy competitiva, que en un primer momento entra por la vista gracias a su llamativo color flúor y que confirma las expectativas cuando la sacamos a recorrer senderos de montaña y caminos campo a través."
+      },
+      {
+        "id": 2,
+        "name": "Notebook",
+        "cost": 20.0,
+        "quantity": 2000,
+        "image": "https://www.spdigital.cl/img/products/new_web/1543951521917-59218456_2453006649.jpg",
+        "description": "Tecnología de protección de identidad de Intel® (Intel® IPT) Proteja su identidad y su negocio Intel® Identity Protection Technology (Intel® IPT"
+      },
+      {
+        "id": 3,
+        "name": "Iphone",
+        "cost": 20.0,
+        "quantity": 2000,
+        "image": "https://i.blogs.es/42db0a/iphone_se/450_1000.jpg",
+        "description": "An entirely new camera system. The brightest, most colorful iPhone display ever. The fastest performance and best battery life in an iPhone. "
+      }
+    ]
+  }
