@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { handleResponse } from '../helpers/handle-response';
-import { Subject } from 'rxjs'
+// import { Subject } from 'rxjs'
 
 // export const authSubject = new Subject()
 
@@ -37,10 +37,10 @@ class AuthenticationService {
         localStorage.setItem('token', JSON.stringify(data.access_token));
         localStorage.setItem('user', JSON.stringify(data.user));
         // authSubject.next(data.user);
-        resolve(true);
+        resolve(data.user);
       })
       .catch(err => {
-        reject(false);
+        reject(null);
       })
     });
     

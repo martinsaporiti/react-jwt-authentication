@@ -1,22 +1,18 @@
 import React from 'react';
-import useUserAuthenticated  from '../../session/useUserAuthenticated';
 import { Link, NavLink } from 'react-router-dom';
-import authenticationService from '../../services/authentication.service';
 import {withRouter} from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
+import { useAuthentication } from "../../session/AuthenticationProvider";
 
 
 
 const Navbar = ({ history }) => {
     
-    const signOut = () => {
-        authenticationService.signOut();
-        history.push(ROUTES.HOME);
-    }
+    const auth = useAuthentication();
 
-    const isAuthenticated = useUserAuthenticated();
+    const isAuthenticated = auth.user != null;
 
-    const NavBarComponent = (isAuthenticated) ? <NavigationAuth handleLogOut = {signOut}/> 
+    const NavBarComponent = (isAuthenticated) ? <NavigationAuth handleLogOut = {auth.logout}/> 
                                               : <NavigationNonAuth />
     return (
         NavBarComponent

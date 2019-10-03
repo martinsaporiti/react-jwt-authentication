@@ -1,11 +1,13 @@
 import React from "react";
 import { Route} from "react-router-dom";
-import useUserAuthenticated from '../../session/useUserAuthenticated';
 import LoginPage from '../pages/LoginPage';
+import { useAuthentication } from "../../session/AuthenticationProvider";
 
 export function PrivateRoute({ component, ...options }){
     
-    const isAuthenticated = useUserAuthenticated();
+    const auth = useAuthentication();
+    const isAuthenticated = auth.user != null;
+
     return(
         isAuthenticated 
             ? <Route {...options} component={component} />
