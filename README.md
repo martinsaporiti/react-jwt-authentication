@@ -45,10 +45,9 @@ En caso de levantar la aplicación reactjs en otro puerto se debe modificar el a
 var whitelist = ['http://localhost:3001']
 ```
 
+### Próximos pasos, utiliar contextAPI para contar con el usuario logueado en todos los componentes.
 
-
-
-
+https://medium.com/trabe/how-we-handle-react-context-e43d303a27a2
 
 ### Bibliografía.
 Para variables de entorno leer:
