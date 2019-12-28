@@ -36,11 +36,10 @@ const AuthenticationProvider = props => {
       setIsAuthenticated(true);
     }
     console.log('useEffect: ',  authUser)
-
   }, [ user ] ) 
 
 
-  return <AuthContext.Provider value={{ user, isAuthenticated, login, logout }} {...props} />;
+  return <AuthContext.Provider value={{ user, login, logout, isAuthenticated }} {...props} />;
 }
 
 export default AuthenticationProvider;

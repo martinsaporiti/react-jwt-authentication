@@ -14,7 +14,6 @@ function getAll() {
         axios.get(`${process.env.REACT_APP_MY_VARIABLE_API_URL}products`, requestOptions)
         .then(handleResponse)
         .then(data => {
-            console.log(data);
             resolve(data);
         })
     });

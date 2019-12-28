@@ -12,8 +12,6 @@ const HomePage = ({ history }) => {
     }
     
     const {user, isAuthenticated}  = useAuthentication();
-
-    console.log(user, isAuthenticated);
     const message = isAuthenticated ? `Bienvenido ${user}` : 'Bienvenido'
 
     return (

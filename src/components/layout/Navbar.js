@@ -10,7 +10,7 @@ const Navbar = ({ history }) => {
     
     const auth = useAuthentication();
 
-    const isAuthenticated = auth.user != null;
+    const isAuthenticated = auth.isAuthenticated;
 
     const NavBarComponent = (isAuthenticated) ? <NavigationAuth handleLogOut = {auth.logout}/> 
                                               : <NavigationNonAuth />
