@@ -15,14 +15,13 @@ const App = () => {
   return (
       <Router>
           <AuthenticationProvider>
-
             <Navbar />
             <div className="container">
               
               <Switch>
-                <Route exact path={ROUTES.HOME} component={ HomePage } />
-                <Route exact path={ROUTES.LOGIN} component={ LoginPage } />
-                <PrivateRoute path={ROUTES.PRODUCTS} component={ ProductosPage } />
+                <Route exact path={ ROUTES.HOME } component={ HomePage } />
+                <Route exact path={ ROUTES.LOGIN } component={ LoginPage } />
+                <PrivateRoute path={ ROUTES.PRODUCTS } component={ ProductosPage } />
               </Switch>
 
             </div>

@@ -4,19 +4,17 @@ import { withRouter } from 'react-router-dom';
 import { useAuthentication } from "../../session/AuthenticationProvider";
 
 
-const HomePage = ({history}) => {
+const HomePage = ({ history }) => {
     
 
     const login = () => {
         history.push('/login');
     }
     
-    // const isAuthenticated = useUserAuthenticated();
-    // const profile = useUserProfile();
+    const {user, isAuthenticated}  = useAuthentication();
 
-    const auth = useAuthentication();
-
-    const message = auth.user != null ? `Bienvenido ${auth.user}` : 'Bienvenido'
+    console.log(user, isAuthenticated);
+    const message = isAuthenticated ? `Bienvenido ${user}` : 'Bienvenido'
 
     return (
         
@@ -24,8 +22,8 @@ const HomePage = ({history}) => {
             <h1 className="display-4">{ message }</h1>
             <p className="lead">Esta página puede ser accedida por todos los usuarios</p>
             {
-                auth.user == null ?
-                    <button type="button" onClick={login} className="btn btn-outline-dark">Login</button>
+                user == null ?
+                    <button type="button" onClick={ login } className="btn btn-outline-dark">Login</button>
                     : null
             }
         </div>
