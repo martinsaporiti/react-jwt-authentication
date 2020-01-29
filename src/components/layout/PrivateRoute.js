@@ -5,8 +5,8 @@ import { useAuthentication } from "../../session/AuthenticationProvider";
 
 export function PrivateRoute({ component, ...options }){
     
-    const auth = useAuthentication();
-    const isAuthenticated = auth.isAuthenticated
+    const { isAuthenticated } = useAuthentication();
+    // const isAuthenticated = auth.isAuthenticated
 
     return(
         isAuthenticated 
