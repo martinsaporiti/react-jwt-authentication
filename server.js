@@ -37,10 +37,10 @@ function isAuthenticated({email, password}){
 }
 
 // Set up a whitelist and check against it:
-var whitelist = ['http://localhost:3001']
+var whitelist = ['http://localhost:3001', 'http://localhost']
 var corsOptions = {
   origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
+    if (whitelist.indexOf(origin) !== -1 || origin == undefined) {
       console.log('en la lista blanca')
       callback(null, true)
     } else {
